@@ -1,0 +1,4 @@
+2025-03-15 19:01:36,792 - INFO - customer-churn-dataset-bucket1
+2025-03-15 19:01:36,792 - INFO - Bucket customer-churn-dataset-bucket created successfully in location us-central1
+2025-03-15 19:01:37,663 - INFO - File D:\Ml-Projects\Customer-Churn\notebook\data\customer_data1.csv uploaded to datasets/customer_churn_dataset successfully.
+

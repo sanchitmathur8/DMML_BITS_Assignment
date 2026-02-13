@@ -1,0 +1,41 @@
+19:17:07.808 | INFO    | snowflake.connector.connection - Snowflake Connector for Python Version: 3.14.0, Python Version: 3.13.2, Platform: Windows-11-10.0.26100-SP0
+19:17:07.810 | INFO    | snowflake.connector.connection - Connecting to GLOBAL Snowflake domain
+19:17:07.811 | INFO    | snowflake.connector.connection - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+d:\ml-projects\customer-churn\src\components\data_ingestion\data_ingestion.py:45: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, conn)
+19:17:09.499 | INFO    | root - Successfully fetched 64374 records from Snowflake.
+19:17:09.512 | INFO    | root -     CUSTOMERID  AGE  GENDER  TENURE  Usage Frequency  Support Calls  Payment Delay Subscription Type Contract Length  Total Spend  Last Interaction  CHURN
+0           1   22  Female      25               14              4             27             Basic         Monthly          598                 9      1  
+1           2   41  Female      28               28              7             13          Standard         Monthly          584                20      0  
+19:17:09.513 | INFO    | snowflake.connector.connection - closed
+19:17:09.571 | INFO    | snowflake.connector.connection - No async queries seem to be running, deleting session
+19:17:09.655 | INFO    | root - CSV file loaded successfully from 'D:\Ml-Projects\Customer-Churn\notebook\data\customerChurn.csv', shape: (5000, 12)
+19:17:09.669 | INFO    | root -    CustomerID   Age Gender  Tenure  Usage Frequency  Support Calls  Payment Delay Subscription Type Contract Length  Total Spend  Last Interaction  Churn
+0    262513.0  41.0   Male    42.0             14.0            4.0           14.0          Standard          Annual       512.81              29.0    0.0  
+1     21513.0  55.0   Male    46.0             27.0            3.0           11.0             Basic         Monthly       307.00               1.0    1.0  
+19:17:09.689 | INFO    | root - Combined dataset shape: (69374, 12)
+19:17:10.156 | INFO    | root - Final dataset saved to: D:\Ml-Projects\Customer-Churn\notebook\data\customer_data1.csv
+19:17:10.161 | INFO    | root - Data ingestion successful! Proceeding with preparation.
+19:17:10.162 | INFO    | root - Starting Data Preparation Module
+19:17:10.249 | INFO    | root - Handling Missing Values
+19:17:10.411 | INFO    | root - Removing duplicate values
+19:17:10.486 | INFO    | root - Encoding Categorical Variables
+19:17:10.558 | INFO    | root - Scaling Numerical Features
+19:17:10.579 | INFO    | root - Generating Visualizations
+19:17:21.281 | INFO    | root - Data Preparation Completed
+19:17:22.486 | INFO    | snowflake.connector.connection - Snowflake Connector for Python Version: 3.14.0, Python Version: 3.13.2, Platform: Windows-11-10.0.26100-SP0
+19:17:22.487 | INFO    | snowflake.connector.connection - Connecting to GLOBAL Snowflake domain
+19:17:22.488 | INFO    | snowflake.connector.connection - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+d:\ml-projects\customer-churn\src\components\data_ingestion\data_ingestion.py:45: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, conn)
+19:17:23.642 | INFO    | root - Successfully fetched 64374 records from Snowflake.
+19:17:23.659 | INFO    | root -     CUSTOMERID  AGE  GENDER  TENURE  Usage Frequency  Support Calls  Payment Delay Subscription Type Contract Length  Total Spend  Last Interaction  CHURN
+0           1   22  Female      25               14              4             27             Basic         Monthly          598                 9      1  
+1           2   41  Female      28               28              7             13          Standard         Monthly          584                20      0  
+19:17:23.661 | INFO    | snowflake.connector.connection - closed
+19:17:23.726 | INFO    | snowflake.connector.connection - No async queries seem to be running, deleting session
+19:17:23.825 | INFO    | root - CSV file loaded successfully from 'D:\Ml-Projects\Customer-Churn\notebook\data\customerChurn.csv', shape: (5000, 12)
+19:17:23.851 | INFO    | root -    CustomerID   Age Gender  Tenure  Usage Frequency  Support Calls  Payment Delay Subscription Type Contract Length  Total Spend  Last Interaction  Churn
+0    262513.0  41.0   Male    42.0             14.0            4.0           14.0          Standard          Annual       512.81              29.0    0.0  
+1     21513.0  55.0   Male    46.0             27.0            3.0           11.0             Basic         Monthly       307.00               1.0    1.0  
+19:17:23.890 | INFO    | root - Combined dataset shape: (69374, 12)

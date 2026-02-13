@@ -1,0 +1,8 @@
+19:23:06.478 | INFO    | snowflake.connector.connection - Snowflake Connector for Python Version: 3.14.0, Python Version: 3.13.2, Platform: Windows-11-10.0.26100-SP0
+19:23:06.482 | INFO    | snowflake.connector.connection - Connecting to GLOBAL Snowflake domain
+19:23:06.483 | INFO    | snowflake.connector.connection - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+D:\Ml-Projects\Customer-Churn\src\components\featurestore\feature_store.py:31: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql(query, conn)
+19:23:08.077 | INFO    | snowflake.connector.connection - closed
+19:23:08.132 | INFO    | snowflake.connector.connection - No async queries seem to be running, deleting session
+19:23:08.194 | INFO    | root - [{'subscription type': 0, 'CUSTOMERID': 1, 'AGE': -1.4302028720386155, 'support calls': -0.397361306242828, 'payment delay': 1.1485333029972467, 'contract length': 1, 'usage frequency': -0.13143681604230723, 'last interaction': -0.7412275528813163, 'GENDER': 0, 'total spend': 0.1900091538880368, 'CHURN': True, 'TENURE': -0.4072600665336818, 'Avg Spend Per Tenure': -0.46655483682764265, 'Recency Score': 2.430486577309277, 'Churn Risk Score': 0.5365102729325113, 'CLV': -0.46655483682764265}]

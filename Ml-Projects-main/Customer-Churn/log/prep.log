@@ -1,0 +1,34 @@
+19:13:49.134 | INFO    | snowflake.connector.connection - Snowflake Connector for Python Version: 3.14.0, Python Version: 3.13.2, Platform: Windows-11-10.0.26100-SP0
+19:13:49.137 | INFO    | snowflake.connector.connection - Connecting to GLOBAL Snowflake domain
+19:13:49.139 | INFO    | snowflake.connector.connection - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+d:\ml-projects\customer-churn\src\components\data_ingestion\data_ingestion.py:45: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, conn)
+19:13:51.844 | INFO    | root - Successfully fetched 64374 records from Snowflake.
+19:13:51.863 | INFO    | root -     CUSTOMERID  AGE  GENDER  TENURE  Usage Frequency  Support Calls  Payment Delay Subscription Type Contract Length  Total Spend  Last Interaction  CHURN
+0           1   22  Female      25               14              4             27             Basic         Monthly          598                 9      1
+1           2   41  Female      28               28              7             13          Standard         Monthly          584                20      0 
+19:13:51.864 | INFO    | snowflake.connector.connection - closed
+19:13:51.924 | INFO    | snowflake.connector.connection - No async queries seem to be running, deleting session
+19:13:52.010 | INFO    | root - CSV file loaded successfully from 'D:\Ml-Projects\Customer-Churn\notebook\data\customerChurn.csv', shape: (5000, 12)
+19:13:52.030 | INFO    | root -    CustomerID   Age Gender  Tenure  Usage Frequency  Support Calls  Payment Delay Subscription Type Contract Length  Total Spend  Last Interaction  Churn
+0    262513.0  41.0   Male    42.0             14.0            4.0           14.0          Standard          Annual       512.81              29.0    0.0  
+1     21513.0  55.0   Male    46.0             27.0            3.0           11.0             Basic         Monthly       307.00               1.0    1.0  
+19:13:52.052 | INFO    | root - Combined dataset shape: (69374, 12)
+19:13:52.515 | INFO    | root - Final dataset saved to: D:\Ml-Projects\Customer-Churn\notebook\data\customer_data1.csv
+19:13:52.521 | INFO    | root - Data ingestion successful! Proceeding with preparation.
+19:13:52.523 | INFO    | root - Starting Data Preparation Module
+19:13:52.616 | INFO    | root - Handling Missing Values
+19:13:52.775 | INFO    | root - Removing duplicate values
+19:13:52.852 | INFO    | root - Encoding Categorical Variables
+19:13:52.923 | INFO    | root - Scaling Numerical Features
+19:13:52.945 | INFO    | root - Generating Visualizations
+19:14:09.312 | INFO    | root - Data Preparation Completed
+19:14:09.322 | INFO    | root - Data Preparation Successful! Here are the first few rows:
+19:14:09.324 | INFO    | root -    subscription type  contract length  last interaction  total spend  usage frequency  ...    tenure  churn  gender support calls       age
+0                  2                0          1.573522    -0.140141        -0.131437  ...  0.586953  False       1     -0.397361 -0.055466
+1                  0                1         -1.667127    -0.927127         1.344420  ...  0.820886   True       1     -0.714970  0.957498
+2                  2                0         -0.856965    -0.113268         0.095618  ... -1.459956   True       1      0.555465  0.523371
+3                  0                2          0.531884     0.481770        -0.244964  ... -0.816642  False       1     -1.032579  0.523371
+4                  0                2         -0.278278     0.777370         0.436200  ... -1.459956  False       0     -1.667797 -1.285494
+
+[5 rows x 12 columns]

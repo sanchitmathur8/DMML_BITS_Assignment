@@ -1,0 +1,5 @@
+19:20:21.804 | INFO    | prefect - Starting temporary server on http://127.0.0.1:8110
+See https://docs.prefect.io/3.0/manage/self-host#self-host-a-prefect-server for more information on running a dedicated Prefect server.
+19:20:32.697 | INFO    | Flow run 'gabby-llama' - Beginning flow run 'gabby-llama' for flow 'export-data-quality-report-to-pdf'
+19:20:32.754 | INFO    | Flow run 'gabby-llama' - Finished in state Completed()
+19:20:33.374 | INFO    | prefect - Stopping temporary server on http://127.0.0.1:8110

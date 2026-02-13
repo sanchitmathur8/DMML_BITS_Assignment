@@ -1,0 +1,48 @@
+19:25:24.636 | INFO    | snowflake.connector.connection - Snowflake Connector for Python Version: 3.14.0, Python Version: 3.13.2, Platform: Windows-11-10.0.26100-SP0
+19:25:24.639 | INFO    | snowflake.connector.connection - Connecting to GLOBAL Snowflake domain
+19:25:24.639 | INFO    | snowflake.connector.connection - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+d:\ml-projects\customer-churn\src\components\data_ingestion\data_ingestion.py:45: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+  df = pd.read_sql_query(query, conn)
+19:25:26.338 | INFO    | root - Successfully fetched 64374 records from Snowflake.
+19:25:26.352 | INFO    | root -     CUSTOMERID  AGE  GENDER  TENURE  Usage Frequency  Support Calls  Payment Delay Subscription Type Contract Length  Total Spend  Last Interaction  CHURN
+0           1   22  Female      25               14              4             27             Basic         Monthly          598                 9      1
+1           2   41  Female      28               28              7             13          Standard         Monthly          584                20      0 
+19:25:26.353 | INFO    | snowflake.connector.connection - closed
+19:25:26.404 | INFO    | snowflake.connector.connection - No async queries seem to be running, deleting session
+19:25:26.486 | INFO    | root - CSV file loaded successfully from 'D:\Ml-Projects\Customer-Churn\notebook\data\customerChurn.csv', shape: (5000, 12)
+19:25:26.500 | INFO    | root -    CustomerID   Age Gender  Tenure  Usage Frequency  Support Calls  Payment Delay Subscription Type Contract Length  Total Spend  Last Interaction  Churn
+0    262513.0  41.0   Male    42.0             14.0            4.0           14.0          Standard          Annual       512.81              29.0    0.0  
+1     21513.0  55.0   Male    46.0             27.0            3.0           11.0             Basic         Monthly       307.00               1.0    1.0  
+19:25:26.519 | INFO    | root - Combined dataset shape: (69374, 12)
+19:25:26.985 | INFO    | root - Final dataset saved to: D:\Ml-Projects\Customer-Churn\notebook\data\customer_data1.csv
+19:25:26.990 | INFO    | root - Data ingestion successful! Proceeding with preparation.
+19:25:26.990 | INFO    | root - Starting Data Preparation Module
+19:25:27.074 | INFO    | root - Handling Missing Values
+19:25:27.241 | INFO    | root - Removing duplicate values
+19:25:27.321 | INFO    | root - Encoding Categorical Variables
+19:25:27.391 | INFO    | root - Scaling Numerical Features
+19:25:27.418 | INFO    | root - Generating Visualizations
+19:25:38.465 | INFO    | root - Data Preparation Completed
+19:25:39.860 | INFO    | root - Data ingestion successful! Here are the first few rows:
+19:25:39.862 | INFO    | root -         age  support calls  contract length  total spend  customerid  ...  usage frequency  Avg Spend Per Tenure  Recency Score  Churn Risk Score       CLV
+0 -0.055466      -0.397361                0    -0.140141      262513  ...        -0.131437             -0.238760       0.115737         -0.394360 -0.238760
+1  0.957498      -0.714970                1    -0.927127       21513  ...         1.344420             -1.129423       3.356386         -0.705358 -1.129423
+2  0.523371       0.555465                0    -0.113268      246844  ...         0.095618              0.077583       2.546224          1.145517  0.077583
+3  0.523371      -1.032579                2     0.481770      266885  ...        -0.244964             -0.589940       1.157375         -0.754684 -0.589940
+4 -1.285494      -1.667797                2     0.777370      430104  ...         0.436200             -0.532461       1.967537         -0.872896 -0.532461
+
+[5 rows x 16 columns]
+19:25:39.887 | INFO    | root - (69374, 16)
+19:25:39.888 | INFO    | root - Success
+D:\Ml-Projects\venv\Lib\site-packages\xgboost\core.py:158: UserWarning: [19:25:49] WARNING: C:\buildkite-agent\builds\buildkite-windows-cpu-autoscaling-group-i-08cbc0333d8d4aae1-1\xgboost\xgboost-ci-windows\src\learner.cc:740:
+Parameters: { "use_label_encoder" } are not used.
+
+  warnings.warn(smsg, UserWarning)
+19:25:50.227 | INFO    | root -                      Accuracy  Precision  Recall  F1 Score
+Logistic Regression    0.8116     0.7977  0.8075    0.8026
+Random Forest          0.9695     0.9962  0.9393    0.9669
+XGBoost                0.9717     0.9970  0.9433    0.9694
+                     Accuracy  Precision  Recall  F1 Score
+Logistic Regression    0.8116     0.7977  0.8075    0.8026
+Random Forest          0.9695     0.9962  0.9393    0.9669
+XGBoost                0.9717     0.9970  0.9433    0.9694

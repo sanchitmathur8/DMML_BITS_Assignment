@@ -1,0 +1,15 @@
+2025-03-15 17:52:43,087 - INFO - Snowflake Connector for Python Version: 3.13.2, Python Version: 3.10.7, Platform: Windows-10-10.0.26100-SP0
+2025-03-15 17:52:43,088 - INFO - Connecting to GLOBAL Snowflake domain
+2025-03-15 17:52:43,088 - INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+2025-03-15 17:52:46,290 - INFO - Successfully fetched 64374 records from Snowflake.
+2025-03-15 17:52:46,310 - INFO -     CUSTOMERID  AGE  GENDER  TENURE  Usage Frequency  Support Calls  Payment Delay Subscription Type Contract Length  Total Spend  Last Interaction  CHURN
+0           1   22  Female      25               14              4             27             Basic         Monthly          598                 9      1
+1           2   41  Female      28               28              7             13          Standard         Monthly          584                20      0 
+2025-03-15 17:52:46,310 - INFO - closed
+2025-03-15 17:52:46,371 - INFO - No async queries seem to be running, deleting session
+2025-03-15 17:52:46,471 - INFO - CSV file loaded successfully from 'D:\Ml-Projects\Customer-Churn\notebook\data\customerChurn.csv', shape: (5000, 12)
+2025-03-15 17:52:46,487 - INFO -    CustomerID   Age Gender  Tenure  Usage Frequency  Support Calls  Payment Delay Subscription Type Contract Length  Total Spend  Last Interaction  Churn
+0    262513.0  41.0   Male    42.0             14.0            4.0           14.0          Standard          Annual       512.81              29.0    0.0
+1     21513.0  55.0   Male    46.0             27.0            3.0           11.0             Basic         Monthly       307.00               1.0    1.0
+2025-03-15 17:52:46,526 - INFO - Combined dataset shape: (69374, 12)
+2025-03-15 17:52:47,239 - INFO - Final dataset saved to: D:\Ml-Projects\Customer-Churn\notebook\data\customer_data1.csv
